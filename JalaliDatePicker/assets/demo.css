@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Samim";
+    src: url('Samim/Samim-FD.woff2') format('woff2'), url('Samim/Samim-FD.woff') format('woff'), url('Samim/Samim-FD.ttf') format('truetype');
+}
+* {
+    font-family: "Samim";
+}
+body {
+    font-size: 14px;
+    background-color: #fcfcfc;
+}
+input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 38px;
+    line-height: 38px;
+    width: 309px;
+    font-size: 16px;
+    padding: 0 5px;
+    color: #666;
+    display: block;
+    margin-top:20px;
+    margin-bottom:40px;
+    margin-right: auto;
+    margin-left:auto;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    text-align: center;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-align: center;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    text-align: center;
+  }
+
+.settings{
+    position: fixed;
+    z-index: 1;
+    bottom:5px;
+    right: 5px;
+    width:150px;
+    padding:5px;
+    text-align: center;
+    background-color: rgb(242, 255, 124)
+}
+.settings *{
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 1px;
+}

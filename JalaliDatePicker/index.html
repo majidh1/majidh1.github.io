@@ -1,0 +1,40 @@
+<html>
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalaliDatepicker.min.css">
+
+    <!-- for demo -->
+    <link rel="stylesheet" href="assets/demo.css">
+    <!-- for demo -->
+</head>
+
+<body>
+    <input type="text" data-jdp placeholder="لطفا یک تاریخ وارد نمایید" />
+    <input type="text" data-jdp data-jdp-min-date="today" placeholder="نمایش تاریخ از امروز" />
+    <input type="text" data-jdp data-jdp-max-date="today" placeholder="نمایش تاریخ تا امروز" />
+    <input type="text" data-jdp data-jdp-max-date="1400/05/10" placeholder="نمایش تاریخ تا 1400/05/10" />
+
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalaliDatepicker.min.js">
+    </script>
+    <script>
+        jalaliDatepicker.startWatch({
+            minDate: "attr",
+            maxDate: "attr"
+        });
+    </script>
+
+
+    <!-- for demo -->
+    <div class="settings" dir="rtl">
+        <a href="https://github.com/majidh1/JalaliDatePicker">
+            Github
+        </a>
+    </div>
+    <script type="text/javascript" src="assets/demo.js"></script>
+    <!-- for demo -->
+</body>
+
+</html>
