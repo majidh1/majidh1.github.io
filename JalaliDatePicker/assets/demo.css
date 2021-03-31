@@ -52,3 +52,11 @@ input {
     font-weight: 900;
     letter-spacing: 1px;
 }
+
+img{
+    max-width: 100%;
+}
+
+.divider{
+    height: 20vh;
+}
