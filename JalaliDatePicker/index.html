@@ -35,10 +35,12 @@
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalaliDatepicker.min.js">
     </script>
     <script>
-        jalaliDatepicker.startWatch({
-            minDate: "attr",
-            maxDate: "attr"
-        });
+        setTimeout(function(){ 
+            jalaliDatepicker.startWatch({
+                minDate: "attr",
+                maxDate: "attr"
+            }); 
+        }, 3000);
     </script>
 
 
