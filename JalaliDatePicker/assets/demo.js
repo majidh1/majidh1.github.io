@@ -2,4 +2,4 @@ setTimeout(function(){
   document.getElementsByTagName("input")[0].focus();
   jalaliDatepicker.hide();
   jalaliDatepicker.show(document.getElementsByTagName("input")[0]);
-}, 3000);
+}, 1000);
