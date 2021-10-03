@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>تولید کننده کد ملی</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="کد ملی صحیح , کد ملی ایران , کدملی , کد ملی رندم , کد ملی شانسی , کد ملی تستی , تست کد ملی , اعتبار سنجی کد ملی , اعتبارسنجی کد ملی , صحت کد ملی ایران , تولید کد ملی معتبر, ایجاد کد ملی درست ,  ساخت کد ملی رند" name="keywords">
+    <meta content="index,follow,archive" name="robots">
+    <meta content="مجید هوشیار - MAjidH1" name="author">
+
+
+    <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeGenerator.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeRoundGenerator.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeValidator.js"></script>
+    <style>
+        span{
+            display: inline-block;
+    font-size: 25px;
+    padding: 15px 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: auto;
+}
+span.mini{
+    font-size: 15px;
+}
+.for-seo{
+    position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.center-box{
+    margin:20px auto;
+    max-width: 500px;
+    text-align: center;
+
+}
+body{
+    padding-top: 5%;
+}
+#codeGeneratorResult,#codeValidatorResult{
+    margin:5px 0;
+    border:1px solid #000;
+    padding:20px 30px;
+    text-align: center;
+    background: #f2f2f2;
+    font-size: 25px;
+}
+    </style>
+</head>
+<body >
+
+<div class="for-seo">
+    <h1>تولید کد ملی</h1>
+    <p>کارت شناسایی ملی یک کد دارای یکسری قوانین خاص است که هر عدد 10 رقمی نمتواند یک کد باشد از این رو برای شما این صفحه آماده سازی شده تا تولید کننده یک کد ملی و بررسی صحت کد ملی باشد</p>
+    <h2>تشخیص صحت کد ملی</h2>
+    <p>در امروز بیشتره نرم‌افزارها برای تولید کد ملی نیاز به استفاده از کد ملی به عنوان یک پارامتر منحصر به فرد و یونیک برای اطلاعات فردی دارند.</p>
+    <h3>تشخیص صحت کد ملی - کد ملی - الگوریتم تشخیص</h3>
+    <p></p>
+    <h4>ساخت کد ملی معتبر</h4>
+</div>
+
+<div class="center-box">
+    <span onclick="codeRoundGenerator()" style="margin:0 20px">تولید کد ملی رند</span>
+    <span onclick="codeGenerator()">تولید کد ملی</span> 
+    <div id="codeGeneratorResult"></div>
+</div>
+<hr style="margin: 5% 0">
+<div class="center-box">
+    <input type="text" id="codeValidatorInput" placeholder="کد ملی را وارد کنید" style="font-size: 20px;width: 200px;padding: 10px;"/>
+<span onclick="codeValidator()" class="mini">بررسی صحت کد ملی</span>
+<div id="codeValidatorResult"></div>
+</div>
+
+<script>
+    function codeGenerator(){
+        document.getElementById("codeGeneratorResult").innerText=generator();
+    }
+    function codeRoundGenerator(){
+        document.getElementById("codeGeneratorResult").innerText=roundGenerator();
+    }
+    function codeValidator(){
+        if(validator(document.getElementById("codeValidatorInput").value)){
+            document.getElementById("codeValidatorResult").innerHTML="<b style='color:green'>صحیح</b>"
+        }else{
+            document.getElementById("codeValidatorResult").innerHTML="<b style='color:red'>ناصحیح</b>"
+        }
+    }    
+</script>
+</body>
+</html>
