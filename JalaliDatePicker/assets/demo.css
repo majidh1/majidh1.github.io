@@ -56,7 +56,10 @@ input {
 img{
     max-width: 100%;
 }
-
+p {
+    text-align: center;
+    direction: rtl;
+}
 .divider{
     height: 20vh;
 }
