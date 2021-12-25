@@ -1,90 +1,188 @@
 <style>
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-.boxy {
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 1.5em;
-  color: rgba(255, 255, 255, 0);
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 0.6em 1.6em;
-  margin: 0.6em;
-  border-style: solid;
-  border-width: 1px;
-  transition: all 0.2s ease;
-  -o-border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%) 1 round;
-     border-image: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%) 1 round;
-  background: linear-gradient(155deg, #fb83fa 0%, #31bcb8 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.boxy:hover {
-  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.5), 2px 2px 6px rgba(49, 188, 184, 0.4), -2px -2px 6px rgba(251, 131, 250, 0.4);
-}
-.boxy:hover {
-  color: rgba(255, 255, 255, 0.1);
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
-}
-.boxy.red {
-  -o-border-image: linear-gradient(155deg, #fc5c3c 0%, #ffb638 100%) 1 round;
-     border-image: linear-gradient(155deg, #fc5c3c 0%, #ffb638 100%) 1 round;
-  background: linear-gradient(155deg, #fc5c3c 0%, #ffb638 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.boxy.red:hover {
-  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.5), 2px 2px 6px rgba(255, 182, 56, 0.4), -2px -2px 6px rgba(252, 92, 60, 0.4);
-}
-.boxy.green {
-  -o-border-image: linear-gradient(155deg, #06e5de 0%, #AAFFA9 100%) 1 round;
-     border-image: linear-gradient(155deg, #06e5de 0%, #AAFFA9 100%) 1 round;
-  background: linear-gradient(155deg, #06e5de 0%, #AAFFA9 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.boxy.green:hover {
-  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.5), 2px 2px 6px rgba(170, 255, 169, 0.4), -2px -2px 6px rgba(6, 229, 222, 0.4);
-}
-.boxy.la {
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  font-size: 3em;
-  padding: 0.3em;
-  border-width: 2px;
-  display: block;
-  width: 70%;
-  margin: 0.6em auto;
-  -o-border-image: linear-gradient(155deg, #F0C27B 0%, #ad1ba3 100%) 1 round;
-     border-image: linear-gradient(155deg, #F0C27B 0%, #ad1ba3 100%) 1 round;
-  background: linear-gradient(155deg, #F0C27B 0%, #ad1ba3 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-.boxy.la:hover {
-  box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.5), 2px 2px 6px rgba(173, 27, 163, 0.4), -2px -2px 6px rgba(240, 194, 123, 0.4);
+html 
+{
+    overflow-x: hidden;
 }
 
 body {
-  padding: 50px;
-  background: linear-gradient(135deg, #313b53 0%, #213037 100%);
-  text-align: center;
+
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: white;
+    
 }
 
-body, html {
-  min-height: 100%;
+a
+{
+
+    text-decoration: none;
+
 }
 
-p {
-  color: rgba(255, 255, 255, 0.7);
-  margin: 30px;
+
+.card
+{
+    z-index: 1;
+    position: relative;
+    width: 300px;
+    height:400px;
+    margin: 0 auto;
+    margin-top:100px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition:    all 0.7s ease-in-out;
+    -o-transition:      all 0.7s ease-in-out;
+    -ms-transition:     all 0.7s ease-in-out;
+/*
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.2);
+*/
 }
+.card.active
+{
+    height:490px;
+}
+.banner
+{
+    z-index: 2;
+    position: relative;
+    margin-top: -154px;
+    width:100%;
+    height:150px;
+    background-image: url("https://picsum.photos/seed/picsum/400/200");
+    background-size: cover;
+    border-bottom: solid 1px lightgrey;
+  
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition:    all 0.7s ease-in-out;
+    -o-transition:      all 0.7s ease-in-out;
+    -ms-transition:     all 0.7s ease-in-out;
+}
+
+.banner.active
+{
+    height: 0;
+  
+}
+
+.photo
+{
+    z-index: 3;
+    position: relative;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    margin: 0 auto;
+    background-image: url("https://avatars.githubusercontent.com/u/43379900?s=200&v=4");
+    background-size: cover;
+    background-position: 50% 50%;
+    top:75px;
+    -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+    -webkit-transition: top 0.7s ease-in-out, background 0.15s ease;
+    -moz-transition:    top 0.7s ease-in-out, background 0.15s ease;
+    -o-transition:      top 0.7s ease-in-out, background 0.15s ease;
+    -ms-transition:     top 0.7s ease-in-out, background 0.15s ease;
+}
+
+.photo.active
+{
+    top:-80px;
+}
+.card ul
+{
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-top:87px;
+    margin-bottom:30px;
+    font-size: 20px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition:    all 0.7s ease-in-out;
+    -o-transition:      all 0.7s ease-in-out;
+    -ms-transition:     all 0.7s ease-in-out;
+}
+
+.card ul.active
+{
+    opacity:0;
+    visibility: hidden;
+}
+
+.card i
+{
+    font-size: 25px;
+    display: inline-block;
+    margin-top:10px;
+    margin-left: 40px;
+    margin-right: 150px;
+    width: 300px;;
+    text-align: left;
+    color: #C7D0E1;
+}
+
+.social-media-banner
+{
+    width: 300px;
+    height: 50px;
+    margin-top: 25px;
+    text-align: center;
+    position: absolute;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition:    all 1.5s ease-in-out;
+    -o-transition:      all 1.5s ease-in-out;
+    -ms-transition:     all 1.5 ease-in-out;
+}
+
+.social-media-banner.active
+{
+    opacity:0;
+    visibility: hidden;
+        -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition:    all 0.1s ease-in-out;
+    -o-transition:      all 0.1s ease-in-out;
+    -ms-transition:     all 0.1s ease-in-out;
+}
+
+.social-media-banner a i
+{
+    display: inline;
+    
+    width: auto;
+    margin-right:15px;
+    margin-left: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition:    all 0.3s ease-in-out;
+    -o-transition:      all 0.3s ease-in-out;
+    -ms-transition:     all 0.3s ease-in-out;
+}
+
+.social-media-banner a i:hover
+{
+    color:#979da8;
+}
+
 </style>
 
-<a class="boxy" href="https://www.linkedin.com/in/majidh1">
-    my LinkedIn
-</a>
-<a class="boxy" href="https://github.com/majidh1">
-    my Github
-</a>
+<body>
+        <div class="card">
+            <div class="photo"></div>
+            <div class="banner"></div>
+            <ul>
+                <li><b>Majid Hooshiyar - MAjidH1</b></li>
+                <li>Web Developer</li>
+            </ul>
+            <button class="contact" id="main-button">click to get in touch</button>
+            <div class="social-media-banner">
+                <a href="https://github.com/majidh1"><i class="fa fa-github"></i></a>
+                <a href="https://instagram.com/majidhone"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/majidh1"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+    </body>

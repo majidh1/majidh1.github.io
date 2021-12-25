@@ -1,10 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang = "fa">
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-<head>
-    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalaliDatepicker.min.css">
+<title>JalaliDatePicker - بهترین datepicker شمسی یا جلالی کاملا فارسی تاریخ </title>
+<meta name="description" content="یک DatePicker فارسی سازگار با تاریخ شمسی js و css PersianDatePicker با تاریخ شمسی سازگار است و سورس کامل آن برای شما در دسترس هست، تا بتوانید راحتتر آن را تغییر دهید. برای مشاهده این Jalali DatePicker به ادامه مطلب توجه کنید">
+<meta http-equiv = "content-language" content = "fa">
+    <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" >
+    <head>
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
 
     <!-- for demo -->
     <link rel="stylesheet" href="assets/demo.css">
@@ -12,6 +16,7 @@
 </head>
 
 <body>
+    <h1 style="text-align:center">jalali datePicker - دیت پیکر شمسی</h1>
     <input type="text" data-jdp placeholder="لطفا یک تاریخ وارد نمایید" />
     <input type="text" data-jdp data-jdp-min-date="today" placeholder="نمایش تاریخ از امروز" />
     <input type="text" data-jdp data-jdp-max-date="today" placeholder="نمایش تاریخ تا امروز" />
@@ -19,19 +24,21 @@
     <div class="divider"></div>
     <div style="text-align:center">
         <h2>قابلیت شخصی سازی بالا</h2>
-        <img src="assets/images/sample1.png"/>
-        <img src="assets/images/sample5.png"/>
-        <img src="assets/images/sample2.png"/>
-        <img src="assets/images/sample3.png"/>
-        <img src="assets/images/sample4.png"/>
+        <img alt="sample1 jalalidatepicker" src="assets/images/sample1.png"/>
+        <img alt="sample2 jalalidatepicker" src="assets/images/sample5.png"/>
+        <img alt="sample3 jalalidatepicker" src="assets/images/sample2.png"/>
+        <img alt="sample4 jalalidatepicker" src="assets/images/sample3.png"/>
+        <img alt="sample5 jalalidatepicker" src="assets/images/sample4.png"/>
     </div>
-    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalaliDatepicker.min.js">
+    <p>این پلاگین تنظیمات زیادی دارد که می توانید از لینک github مستندات کاملش رو مشاهده کنید.</p>
+    <p> با انتخاب کنترل input پلاگین date picker فعال شده و می توانید تاریخ مورد نظر خود را انتخاب نمایید</p>
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js">
     </script>
     <script>
-        jalaliDatepicker.startWatch({
-            minDate: "attr",
-            maxDate: "attr"
-        });
+            jalaliDatepicker.startWatch({
+                minDate: "attr",
+                maxDate: "attr"
+            }); 
     </script>
 
 
