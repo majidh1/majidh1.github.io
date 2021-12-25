@@ -1,188 +1,164 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <style>
-html 
-{
-    overflow-x: hidden;
-}
+    html {
+        overflow-x: hidden;
+    }
 
-body {
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        background-color: white;
+    }
 
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    background-color: white;
-    
-}
-
-a
-{
-
-    text-decoration: none;
-
-}
+    a {
+        text-decoration: none;
+    }
 
 
-.card
-{
-    z-index: 1;
-    position: relative;
-    width: 300px;
-    height:400px;
-    margin: 0 auto;
-    margin-top:100px;
-    background-color: white;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition:    all 0.7s ease-in-out;
-    -o-transition:      all 0.7s ease-in-out;
-    -ms-transition:     all 0.7s ease-in-out;
-/*
-        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.2);
-*/
-}
-.card.active
-{
-    height:490px;
-}
-.banner
-{
-    z-index: 2;
-    position: relative;
-    margin-top: -154px;
-    width:100%;
-    height:150px;
-    background-image: url("https://picsum.photos/seed/picsum/400/200");
-    background-size: cover;
-    border-bottom: solid 1px lightgrey;
-  
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition:    all 0.7s ease-in-out;
-    -o-transition:      all 0.7s ease-in-out;
-    -ms-transition:     all 0.7s ease-in-out;
-}
+    .card {
+        z-index: 1;
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: white;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        -ms-transition: all 0.7s ease-in-out;
+    }
 
-.banner.active
-{
-    height: 0;
-  
-}
+        .card.active {
+            height: 490px;
+        }
 
-.photo
-{
-    z-index: 3;
-    position: relative;
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    background-color: white;
-    margin: 0 auto;
-    background-image: url("https://avatars.githubusercontent.com/u/43379900?s=200&v=4");
-    background-size: cover;
-    background-position: 50% 50%;
-    top:75px;
-    -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-    -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-    box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-    -webkit-transition: top 0.7s ease-in-out, background 0.15s ease;
-    -moz-transition:    top 0.7s ease-in-out, background 0.15s ease;
-    -o-transition:      top 0.7s ease-in-out, background 0.15s ease;
-    -ms-transition:     top 0.7s ease-in-out, background 0.15s ease;
-}
+    .banner {
+        z-index: 2;
+        position: relative;
+        margin-top: -154px;
+        width: 100%;
+        height: 150px;
+        background-image: url("https://picsum.photos/seed/picsum/400/200");
+        background-size: cover;
+        border-bottom: solid 1px lightgrey;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        -ms-transition: all 0.7s ease-in-out;
+    }
 
-.photo.active
-{
-    top:-80px;
-}
-.card ul
-{
-    list-style: none;
-    text-align: center;
-    padding-left: 0;
-    margin-top:87px;
-    margin-bottom:30px;
-    font-size: 20px;
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition:    all 0.7s ease-in-out;
-    -o-transition:      all 0.7s ease-in-out;
-    -ms-transition:     all 0.7s ease-in-out;
-}
+        .banner.active {
+            height: 0;
+        }
 
-.card ul.active
-{
-    opacity:0;
-    visibility: hidden;
-}
+    .photo {
+        z-index: 3;
+        position: relative;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        background-color: white;
+        margin: 0 auto;
+        background-image: url("https://avatars.githubusercontent.com/u/43379900?s=200&v=4");
+        background-size: cover;
+        background-position: 50% 50%;
+        top: 75px;
+        -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+        -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+        box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+        -webkit-transition: top 0.7s ease-in-out, background 0.15s ease;
+        -moz-transition: top 0.7s ease-in-out, background 0.15s ease;
+        -o-transition: top 0.7s ease-in-out, background 0.15s ease;
+        -ms-transition: top 0.7s ease-in-out, background 0.15s ease;
+    }
 
-.card i
-{
-    font-size: 25px;
-    display: inline-block;
-    margin-top:10px;
-    margin-left: 40px;
-    margin-right: 150px;
-    width: 300px;;
-    text-align: left;
-    color: #C7D0E1;
-}
+        .photo.active {
+            top: -80px;
+        }
 
-.social-media-banner
-{
-    width: 300px;
-    height: 50px;
-    margin-top: 25px;
-    text-align: center;
-    position: absolute;
-    -webkit-transition: all 1.5s ease-in-out;
-    -moz-transition:    all 1.5s ease-in-out;
-    -o-transition:      all 1.5s ease-in-out;
-    -ms-transition:     all 1.5 ease-in-out;
-}
+    .card ul {
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 87px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        -webkit-transition: all 0.7s ease-in-out;
+        -moz-transition: all 0.7s ease-in-out;
+        -o-transition: all 0.7s ease-in-out;
+        -ms-transition: all 0.7s ease-in-out;
+    }
 
-.social-media-banner.active
-{
-    opacity:0;
-    visibility: hidden;
-        -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition:    all 0.1s ease-in-out;
-    -o-transition:      all 0.1s ease-in-out;
-    -ms-transition:     all 0.1s ease-in-out;
-}
+        .card ul.active {
+            opacity: 0;
+            visibility: hidden;
+        }
 
-.social-media-banner a i
-{
-    display: inline;
-    
-    width: auto;
-    margin-right:15px;
-    margin-left: 10px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition:    all 0.3s ease-in-out;
-    -o-transition:      all 0.3s ease-in-out;
-    -ms-transition:     all 0.3s ease-in-out;
-}
+    .card i {
+        font-size: 25px;
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 150px;
+        width: 300px;
+        ;
+        text-align: left;
+        color: #C7D0E1;
+    }
 
-.social-media-banner a i:hover
-{
-    color:#979da8;
-}
+    .social-media-banner {
+        width: 300px;
+        height: 50px;
+        margin-top: 25px;
+        text-align: center;
+        position: absolute;
+        -webkit-transition: all 1.5s ease-in-out;
+        -moz-transition: all 1.5s ease-in-out;
+        -o-transition: all 1.5s ease-in-out;
+        -ms-transition: all 1.5 ease-in-out;
+    }
 
+        .social-media-banner.active {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+        }
+
+        .social-media-banner a i {
+            display: inline;
+            width: auto;
+            margin-right: 15px;
+            margin-left: 10px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+        }
+
+            .social-media-banner a i:hover {
+                color: #979da8;
+            }
 </style>
 
 <body>
-        <div class="card">
-            <div class="photo"></div>
-            <div class="banner"></div>
-            <ul>
-                <li><b>Majid Hooshiyar - MAjidH1</b></li>
-                <li>Web Developer</li>
-            </ul>
-            <button class="contact" id="main-button">click to get in touch</button>
-            <div class="social-media-banner">
-                <a href="https://github.com/majidh1"><i class="fa fa-github"></i></a>
-                <a href="https://instagram.com/majidhone"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/majidh1"><i class="fa fa-linkedin"></i></a>
-            </div>
-          </div>
-    </body>
+    <div class="card">
+        <div class="photo"></div>
+        <div class="banner"></div>
+        <ul>
+            <li><b>Majid Hooshiyar - MAjidH1</b></li>
+            <li>Web Developer</li>
+        </ul>
+        <div class="social-media-banner">
+            <a href="https://github.com/majidh1"><i class="fa fa-github"></i></a>
+            <a href="https://instagram.com/majidhone"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/majidh1"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+</body>
