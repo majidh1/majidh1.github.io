@@ -17,10 +17,12 @@
 
 <body>
     <h1 style="text-align:center">jalali datePicker - دیت پیکر شمسی</h1>
-    <input type="text" data-jdp placeholder="لطفا یک تاریخ وارد نمایید" />
-    <input type="text" data-jdp data-jdp-min-date="today" placeholder="نمایش تاریخ از امروز" />
-    <input type="text" data-jdp data-jdp-max-date="today" placeholder="نمایش تاریخ تا امروز" />
-    <input type="text" data-jdp data-jdp-max-date="1400/05/10" placeholder="نمایش تاریخ تا 1400/05/10" />
+    <input type="text" data-jdp placeholder="لطفا یک تاریخ وارد نمایید" data-jdp-only-date/>
+    <input type="text" data-jdp data-jdp-min-date="today" placeholder="نمایش تاریخ از امروز" data-jdp-only-date/>
+    <input type="text" data-jdp data-jdp-max-date="today" placeholder="نمایش تاریخ تا امروز" data-jdp-only-date/>
+    <input type="text" data-jdp data-jdp-max-date="1400/05/10" placeholder="نمایش تاریخ تا 1400/05/10" data-jdp-only-date/>
+    <input type="text" data-jdp placeholder="انخاب تاریخ و زمان"/>    
+    <input type="text" data-jdp placeholder="امکان انتخاب فقط زمان" data-jdp-only-time/>    
     <div class="divider"></div>
     <div style="text-align:center">
         <h2>قابلیت شخصی سازی بالا</h2>
@@ -37,7 +39,8 @@
     <script>
             jalaliDatepicker.startWatch({
                 minDate: "attr",
-                maxDate: "attr"
+                maxDate: "attr",
+                time:true
             }); 
     </script>
 
