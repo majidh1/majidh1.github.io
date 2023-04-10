@@ -73,6 +73,22 @@
         float: left;
         padding-right: 10px;
       }
+    .fix-bottom-ad {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00a97f;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .fix-bottom-ad b {
+        background:yellow;
+        padding:3px 5px;
+        border-radius:5px;
+        font-size:20px;
+    }
     </style>
   </head>
   <body>
@@ -100,6 +116,7 @@
       <span onclick="codeValidator()" class="mini">بررسی صحت کد ملی</span>
       <div id="codeValidatorResult"></div>
     </div>
+    <div class="fix-bottom-ad"><b>برای حمایت از این صفحه و کمک به گسترش و رواج فرهنگ اوپن سورس در ایران میتوانید به <a href="https://github.com/majidh1/iranianNationalCode">ریپازیتوری گیت‌هاب</a> ستاره بدین</b></div>
     <script>
       function codeGenerator() {
         document.getElementById("codeGeneratorResult").innerText = generator();
