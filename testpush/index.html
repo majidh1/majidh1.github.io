@@ -17,6 +17,7 @@
   <div id="notis"></div>
   <div id="err"></div>
   <script>
+    if(!firebase.messaging.isSupported()) alert("not Supported!")
     navigator.serviceWorker.register('/testpush/firebase-messaging-sw.js').then((registration) => {
     MsgElem = document.getElementById('msg');
     TokenElem = document.getElementById('token');
