@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>push - تست</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+</head>
+<body>
+  <div id="token"></div>
+  <div id="msg"></div>
+  <div id="notis"></div>
+  <div id="err"></div>
+  <script>
+    MsgElem = document.getElementById('msg');
+    TokenElem = document.getElementById('token');
+    NotisElem = document.getElementById('notis');
+    ErrElem = document.getElementById('err');
+
+    // TODO: Replace firebaseConfig you get from Firebase Console
+    var firebaseConfig = {
+      apiKey: "AIzaSyDPasu1DvS3AMe0ZFu-egtG7fQcFshctgw",
+      authDomain: "testweb-ec2b7.firebaseapp.com",
+      projectId: "testweb-ec2b7",
+      storageBucket: "testweb-ec2b7.appspot.com",
+      messagingSenderId: "621162235980",
+      appId: "1:621162235980:web:fd70b8b63a022773084ce9",
+      measurementId: "G-JCWB2LK43T"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const messaging = firebase.messaging();
+    messaging
+        .requestPermission()
+        .then(function () {
+            MsgElem.innerHTML = 'Notification permission granted.';
+            return messaging.getToken();
+        })
+        .then(function (token) {
+            TokenElem.innerHTML = 'Device token is : <br>' + token;
+        })
+        .catch(function (err) {
+            ErrElem.innerHTML = ErrElem.innerHTML + '; ' + err;
+            console.log('Unable to get permission to notify.', err);
+        });
+
+    let enableForegroundNotification = true;
+    messaging.onMessage(function (payload) {
+        console.log('Message received. ', payload);
+        NotisElem.innerHTML =
+            NotisElem.innerHTML + JSON.stringify(payload);
+
+        if (enableForegroundNotification) {
+            let notification = payload.notification;
+            navigator.serviceWorker
+                .getRegistrations()
+                .then((registration) => {
+                    registration[0].showNotification(notification.title);
+                });
+        }
+    });
+</script>
+</body>
+</html>
