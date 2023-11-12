@@ -16,7 +16,6 @@
   <div id="err"></div>
   <script>
     navigator.serviceWorker.register('/testpush/firebase-messaging-sw.js').then((registration) => {
-    messaging.useServiceWorker(registration);
     MsgElem = document.getElementById('msg');
     TokenElem = document.getElementById('token');
     NotisElem = document.getElementById('notis');
@@ -35,6 +34,8 @@
     firebase.initializeApp(firebaseConfig);
 
     const messaging = firebase.messaging();
+    messaging.useServiceWorker(registration);
+      
     messaging
         .requestPermission()
         .then(function () {
