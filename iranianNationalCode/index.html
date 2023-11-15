@@ -15,13 +15,17 @@
     <style>
       span {
         display: inline-block;
-        font-size: 25px;
-        padding: 15px 30px;
+        font-size: 23px;
+        padding: 0 25px;
         background: #000;
         color: #fff;
-        border-radius: 2px;
+        border-radius: 7px;
         cursor: pointer;
-        margin: auto;
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        margin: 10px;
       }
 
       span.mini {
@@ -41,18 +45,23 @@
       }
 
       body {
-        padding-top: 5%;
+        padding-top: 5vh;
         font-family: iransans,vazir,samim,shabnam,nazanin,bnazanin,tahoma;
       }
 
-      #codeGeneratorResult,
-      #codeValidatorResult {
-        margin: 5px 0;
-        border: 1px solid #000;
-        padding: 20px 30px;
+      input,#codeValidatorResult,#codeGeneratorResult {
+        border: 2px solid #000;
+        padding: 0px 10px;
         text-align: center;
         background: #f2f2f2;
         font-size: 25px;
+        border-radius: 7px;
+        height: 50px !important;
+        line-height: 50px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        min-width: 200px;
+        margin:10px;
       }
 
       .github-link {
@@ -81,6 +90,7 @@
         background: #00a97f;
         padding: 20px;
         text-align: center;
+        box-sizing: border-box;
     }
     
     .fix-bottom-ad b {
@@ -106,13 +116,13 @@
       <h4>ساخت کد ملی معتبر</h4>
     </div>
     <div class="center-box">
-      <span onclick="codeRoundGenerator()" style="margin:0 20px">تولید کد ملی رند</span>
+      <span onclick="codeRoundGenerator()">تولید کد ملی رند</span>
       <span onclick="codeGenerator()">تولید کد ملی</span>
       <div id="codeGeneratorResult"></div>
     </div>
-    <hr style="margin: 5% 0">
+    <hr style="margin: 15vh 0">
     <div class="center-box">
-      <input type="text" id="codeValidatorInput" placeholder="کد ملی را وارد کنید" style="font-size: 20px;width: 200px;padding: 10px;" />
+      <input type="text" id="codeValidatorInput" placeholder="کد ملی را وارد کنید" style="max-width: 160px;padding: 10px;" maxlength="13" />
       <span onclick="codeValidator()" class="mini">بررسی صحت کد ملی</span>
       <div id="codeValidatorResult"></div>
     </div>
