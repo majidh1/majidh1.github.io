@@ -53,9 +53,17 @@ input {
     color: #666;
     display: block;
     margin-top:20px;
-    margin-bottom:40px;
+    margin-bottom:0px;
     margin-right: auto;
     margin-left:auto;
+}
+#result {
+    background: #ffffa4;
+    padding: 5px 20px;
+    color: #0404b2;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     text-align: center;
@@ -112,7 +120,7 @@ document.getElementById("salary").addEventListener("input",(event)=>{
   const salary=event.target.value.replace(/[^\d]/g,"");
   event.target.value=new Intl.NumberFormat('en-US').format(salary);
   const taxValue = tax(salary);
-  document.getElementById("result").innerText=`مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)} حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)}`
+  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} | مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
 })
 </script>
 </html>
