@@ -26,22 +26,23 @@ p {
     text-align: center;
     direction: rtl;
 }
-.settings{
-    position: fixed;
-    z-index: 1;
-    bottom:5px;
-    right: 5px;
-    width:150px;
-    padding:5px;
-    text-align: center;
-    background-color: rgb(242, 255, 124)
-}
-.settings *{
-    vertical-align: middle;
-    text-decoration: none;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
+    .fix-bottom-ad {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00a97f;
+        padding: 2vh;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .fix-bottom-ad b {
+        background:yellow;
+        padding:3px 5px;
+        border-radius:5px;
+        font-size: 1.8vh;
+    }
 input {
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -94,11 +95,7 @@ input {
     </div>
     <p></p>
     <p></p>
-    <div class="settings" dir="rtl">
-        <a href="https://github.com/majidh1/majidh1.github.io">
-            Github
-        </a>
-    </div>
+    <div class="fix-bottom-ad"><b>برای حمایت از این صفحه و کمک به گسترش و رواج فرهنگ اوپن سورس در ایران میتوانید به <a href="https://github.com/majidh1/majidh1.github.io">ریپازیتوری گیت&zwnj;هاب</a> ستاره بدین</b></div>
 </body>
 <script>
 const steps = [12_000_000,16_500_000,27_000_000,40_000_000];
