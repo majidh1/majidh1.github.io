@@ -88,7 +88,7 @@ input {
     <div class="divider"></div>
     <div style="text-align:center">
         <h2>محاسبه آنلاین مقدار مالیات حقوق کارمندان در سال ۱۴۰۴ در فیش حقوقی</h2>
-        <h3>عدد حقوق شامل مالیت را به تومان وارد کنید</h3>
+        <h3>عدد حقوق شامل مالیت را به <b style="color: blue">تومان</b> وارد کنید</h3>
         <input placeholder="حقوق مشمول مالیات را وارد کنید" id="salary">
         <h4 id="result">اعداد به تومان می‌باشد</h4>
         <h5>توجه داشته باشید این سایت فقط برای محاسبه مالیات می‌باشد و بیمه و سایر کسورات در اعداد لحاظ نشده است</h5>
@@ -117,7 +117,7 @@ document.getElementById("salary").addEventListener("input",(event)=>{
   const salary=event.target.value.replace(/[^\d]/g,"");
   event.target.value=new Intl.NumberFormat('en-US').format(salary);
   const taxValue = tax(salary);
-  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} | مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
+  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} &nbsp; | &nbsp; مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
 })
 </script>
 </html>
