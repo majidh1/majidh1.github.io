@@ -110,7 +110,7 @@ function tax(salary) {
             result += diff * percents[i];
         }
     }
-    return result;
+    return Math.round(result || 0);
 }
 
 document.getElementById("salary").addEventListener("input",(event)=>{
