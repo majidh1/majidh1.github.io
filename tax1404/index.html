@@ -117,7 +117,7 @@ document.getElementById("salary").addEventListener("input",(event)=>{
   const salary=event.target.value.replace(/[^\d]/g,"");
   event.target.value=new Intl.NumberFormat('en-US').format(salary);
   const taxValue = tax(salary);
-  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} &nbsp; | &nbsp; مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
+  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} ‌ | ‌ مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
 })
 </script>
 </html>
