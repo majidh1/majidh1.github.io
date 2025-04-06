@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang = "fa">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>محاسبه مالیات بر حقوق به صورت آنلاین</title>
+<meta name="description" content="محاسبه آنلاین و به لحظه مالیات بر حقوق به صورت پله‌ای در سال 1403 با در نظر گرفتن معافیت مالیاتی و حقوق کارمند و کارگران در شرکت خصوصی و دولتی به صورت محاسبه دقیق Online بر اساس حقوق دریافتی">
+<meta http-equiv = "content-language" content = "fa">
+<link href="/favicon.png" rel="shortcut icon" type="image/x-icon" >
+<style>
+@font-face {
+    font-family: "Samim";
+    src: url('/JalaliDatePicker/assets/Samim/Samim-FD.woff2') format('woff2'), url('Samim/Samim-FD.woff') format('woff'), url('/JalaliDatePicker/assets/Samim/Samim-FD.ttf') format('truetype');
+}
+*{
+  font-family: Samim;
+}
+body{
+    font-size: 14px;
+    background-color: #fcfcfc;
+}
+.divider{
+    height: 10vh;
+}
+p {
+    text-align: center;
+    direction: rtl;
+}
+    .fix-bottom-ad {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #00a97f;
+        padding: 2vh;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .fix-bottom-ad b {
+        background:yellow;
+        padding:3px 5px;
+        border-radius:5px;
+        font-size: 1.8vh;
+    }
+input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 38px;
+    line-height: 38px;
+    width: 309px;
+    font-size: 16px;
+    padding: 0 5px;
+    color: #666;
+    display: block;
+    margin-top:20px;
+    margin-bottom:0px;
+    margin-right: auto;
+    margin-left:auto;
+}
+#result {
+    background: #ffffa4;
+    padding: 5px 20px;
+    color: #0404b2;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    text-align: center;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-align: center;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    text-align: center;
+  }
+</style>
+<head>
+
+</head>
+
+<body>
+    <h1 style="text-align:center">محاسبه‌گر حقوق و دستمزد و مالیات بر حقوق در سال 1403</h1>
+
+    <div class="divider"></div>
+    <div style="text-align:center">
+        <h2>محاسبه آنلاین مقدار مالیات حقوق کارمندان در سال ۱۴۰۳ در فیش حقوقی</h2>
+        <h3>عدد حقوق شامل مالیت را به تومان وارد کنید</h3>
+        <input placeholder="حقوق مشمول مالیات را وارد کنید" id="salary">
+        <h4 id="result">اعداد به تومان می‌باشد</h4>
+        <h5>توجه داشته باشید این سایت فقط برای محاسبه مالیات می‌باشد و بیمه و سایر کسورات در اعداد لحاظ نشده است</h5>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="fix-bottom-ad"><b>برای حمایت از این صفحه و کمک به گسترش و رواج فرهنگ اوپن سورس در ایران میتوانید به <a href="https://github.com/majidh1/majidh1.github.io">ریپازیتوری گیت&zwnj;هاب</a> ستاره بدین</b></div>
+</body>
+<script>
+const steps = [12_000_000,16_500_000,27_000_000,40_000_000];
+const percents = [.1,.15,.2,.3]
+
+function tax(salary) {
+    let result = 0;
+    for(var i=steps.length-1;i>=0;i--){
+        if(salary>steps[i]){
+            const diff = salary - steps[i];
+            salary = steps[i];
+            result += diff * percents[i];
+        }
+    }
+    return result;
+}
+
+document.getElementById("salary").addEventListener("input",(event)=>{
+  const salary=event.target.value.replace(/[^\d]/g,"");
+  event.target.value=new Intl.NumberFormat('en-US').format(salary);
+  const taxValue = tax(salary);
+  document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} | مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
+})
+</script>
+</html>
