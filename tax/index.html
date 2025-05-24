@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang = "fa">
-<head>
-<meta charset="utf-8" />
-<meta name="robots" content="index, follow">
+    <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <title>محاسبه مالیات بر حقوق به صورت آنلاین</title>
@@ -13,10 +11,9 @@
 @font-face {
     font-family: "Samim";
     src: url('/JalaliDatePicker/assets/Samim/Samim-FD.woff2') format('woff2'), url('Samim/Samim-FD.woff') format('woff'), url('/JalaliDatePicker/assets/Samim/Samim-FD.ttf') format('truetype');
-    font-display: swap;
 }
 *{
-  font-family: Samim, Tahoma, Arial, sans-serif;
+  font-family: Samim;
 }
 body{
     font-size: 14px;
@@ -81,6 +78,7 @@ input {
     text-align: center;
   }
 </style>
+<head>
 
 </head>
 
@@ -91,17 +89,16 @@ input {
     <div style="text-align:center">
         <h2>محاسبه آنلاین مقدار مالیات حقوق کارمندان در سال ۱۴۰۴ در فیش حقوقی</h2>
         <h3>عدد حقوق شامل مالیت را به <b style="color: blue">تومان</b> وارد کنید</h3>
-        <label for="salary">حقوق مشمول مالیات</label>
         <input placeholder="حقوق مشمول مالیات را وارد کنید" id="salary">
-        <h4 id="result" aria-live="polite">اعداد به تومان می‌باشد</h4>
+        <h4 id="result">اعداد به تومان می‌باشد</h4>
         <h5>توجه داشته باشید این سایت فقط برای محاسبه مالیات می‌باشد و بیمه و سایر کسورات در اعداد لحاظ نشده است</h5>
-        <div><a href="/tax1404">سال 1404</a> | <a href="/tax1403">سال 1403</a></div>
     </div>
     <p></p>
     <p></p>
     <div class="fix-bottom-ad"><b>برای حمایت از این صفحه و کمک به گسترش و رواج فرهنگ اوپن سورس در ایران میتوانید به <a href="https://github.com/majidh1/iranian-salary-tax">ریپازیتوری گیت&zwnj;هاب</a> ستاره بدین</b></div>
+</body>
 <script>
-const steps = [24_000_000,30_500_000,38_000_000,50_000_000,66_666_667];
+const steps = [24_000_000,30_000_000,38_000_000,50_000_000,66_666_667];
 const percents = [.1,.15,.2,.25,.3]
 
 function tax(salary) {
@@ -123,6 +120,4 @@ document.getElementById("salary").addEventListener("input",(event)=>{
   document.getElementById("result").innerText=`حقوق دریافتی: ${new Intl.NumberFormat('en-US').format(salary - taxValue)} ‌ | ‌ مالیات: ${new Intl.NumberFormat('en-US').format(taxValue)}`
 })
 </script>
-</body>
-
 </html>
