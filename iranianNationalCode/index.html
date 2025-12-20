@@ -1,149 +1,717 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>تولید کننده کد ملی</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta charset="utf-8" />
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="ساخت و ایجاد یک کد ملی به سادگی انجام میشود و برای صحت و بررسی و تست کد ملی این پیج ساخته شده است. تولید کد ملی رند و شماره ملی ایران و ایرانی رندم است" name="description">
-    <meta content="کد ملی صحیح , کد ملی ایران , کدملی , کد ملی رندم , کد ملی شانسی , کد ملی تستی , تست کد ملی , اعتبار سنجی کد ملی , اعتبارسنجی کد ملی , صحت کد ملی ایران , تولید کد ملی معتبر, ایجاد کد ملی درست ,  ساخت کد ملی رند" name="keywords">
-    <meta content="index,follow,archive" name="robots">
-    <meta content="مجید هوشیار - MAjidH1" name="author">
+    <title>تولید و اعتبارسنجی کد ملی | Iranian National Code</title>
+    <meta name="description" content="ساخت و بررسی صحت کد ملی ایران به سادگی - تولید کد ملی رند و معتبر">
+    <meta name="keywords" content="کد ملی, کد ملی ایران, کد ملی رندم, اعتبارسنجی کد ملی, تولید کد ملی, شماره ملی">
+    <meta name="author" content="مجید هوشیار - MAjidH1">
+    
+    <!-- Importing fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet">
+    
+    <!-- Importing the scripts -->
     <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeGenerator.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeRoundGenerator.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/majidh1/iranianNationalCode@main/src/iranianNationalCodeValidator.js"></script>
-    <style>
-      span {
-        display: inline-block;
-        font-size: 23px;
-        padding: 0 25px;
-        background: #000;
-        color: #fff;
-        border-radius: 7px;
-        cursor: pointer;
-        height: 50px;
-        line-height: 50px;
-        box-sizing: border-box;
-        vertical-align: middle;
-        margin: 10px;
-      }
-
-      span.mini {
-        font-size: 15px;
-      }
-
-      .for-seo {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-
-      .center-box {
-        margin: 20px auto;
-        max-width: 500px;
-        text-align: center;
-      }
-
-      body {
-        padding-top: 5vw;
-        padding-bottom: 30vh;
-        font-family: iransans,vazir,samim,shabnam,nazanin,bnazanin,tahoma;
-      }
-
-      input,#codeValidatorResult,#codeGeneratorResult {
-        border: 2px solid #000;
-        padding: 0px 10px;
-        text-align: center;
-        background: #f2f2f2;
-        font-size: 25px;
-        border-radius: 7px;
-        height: 50px !important;
-        line-height: 50px;
-        box-sizing: border-box;
-        vertical-align: middle;
-        min-width: 200px;
-        margin:10px;
-      }
-
-      .github-link {
-        background: black;
-        color: white;
-        padding: 5px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        height: 35px;
-        display: inline-block;
-        line-height: 2.3;
-        letter-spacing: .6px;
-        font-family: cursive;
-      }
-
-      .github-link svg {
-        fill: yellow;
-        float: left;
-        padding-right: 10px;
-      }
-    .fix-bottom-ad {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: #00a97f;
-        padding: 2vh;
-        text-align: center;
-        box-sizing: border-box;
-    }
     
-    .fix-bottom-ad b {
-        background:yellow;
-        padding:3px 5px;
-        border-radius:5px;
-        font-size: 1.8vh;
-    }
-    </style>
-  </head>
-  <body>
-    <a href="https://github.com/majidh1/iranianNationalCode" class="github-link">
-      <svg aria-hidden="true" version="1.1" width="32" data-view-component="true" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-      </svg>Github </a>
-    <div class="for-seo">
-      <h1>تولید کد ملی</h1>
-      <p>کارت شناسایی ملی یک کد دارای یکسری قوانین خاص است که هر عدد 10 رقمی نمتواند یک کد باشد از این رو برای شما این صفحه آماده سازی شده تا تولید کننده یک کد ملی و بررسی صحت کد ملی باشد</p>
-      <h2>تشخیص صحت کد ملی</h2><h2>j,gdn ;n lgd - ;n lgd vkn</h2>
-      <p>در امروز بیشتره نرم‌افزارها برای تولید کد ملی نیاز به استفاده از کد ملی به عنوان یک پارامتر منحصر به فرد و یونیک برای اطلاعات فردی دارند.</p>
-      <h3>تشخیص صحت کد ملی - کد ملی ساز - الگوریتم تشخیص</h3>
-      <p>ساخت و ایجاد یک کد ملی به سادگی انجام میشود و برای صحت و بررسی و تست کد ملی این پیج ساخته شده است. تولید کد ملی رند و شماره ملی ایران و ایرانی رندم است و کمک برنامه نویسان کد جاوا</p>
-      <h4>ساخت کد ملی معتبر</h4>
-    </div>
-    <div class="center-box">
-      <span onclick="codeRoundGenerator()">تولید کد ملی رند</span>
-      <span onclick="codeGenerator()">تولید کد ملی</span>
-      <div id="codeGeneratorResult"></div>
-    </div>
-    <hr style="margin: 5vh 0">
-    <div class="center-box">
-      <input type="text" id="codeValidatorInput" placeholder="کد ملی را وارد کنید" style="max-width: 160px;padding: 10px;" maxlength="13" />
-      <span onclick="codeValidator()" class="mini">بررسی صحت کد ملی</span>
-      <div id="codeValidatorResult"></div>
-    </div>
-    <div class="fix-bottom-ad"><b>برای حمایت از این صفحه و کمک به گسترش و رواج فرهنگ اوپن سورس در ایران میتوانید به <a href="https://github.com/majidh1/iranianNationalCode">ریپازیتوری گیت‌هاب</a> ستاره بدین</b></div>
-    <script>
-      function codeGenerator() {
-        document.getElementById("codeGeneratorResult").innerText = generator();
-      }
-
-      function codeRoundGenerator() {
-        document.getElementById("codeGeneratorResult").innerText = roundGenerator();
-      }
-
-      function codeValidator() {
-        if (validator(document.getElementById("codeValidatorInput").value)) {
-          document.getElementById("codeValidatorResult").innerHTML = "<b style='color:green'> صحیح </b>"
-        } else {
-          document.getElementById("codeValidatorResult").innerHTML = "<b style='color:red'> ناصحیح </b>"
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
+        
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #9b59b6;
+            --secondary-dark: #8e44ad;
+            --success: #2ecc71;
+            --error: #e74c3c;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --glass-shadow: rgba(0, 0, 0, 0.1);
+            --text-primary: #2c3e50;
+            --text-secondary: #546e7a;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        body {
+            font-family: 'Shabnam', 'Vazir', 'Segoe UI', Tahoma, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Split Screen Layout */
+        .split-container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .panel:hover {
+            flex: 1.05;
+        }
+        
+        .left-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .right-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Panel inner content */
+        .panel-content {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        /* Panel title */
+        .panel-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .left-panel .panel-title {
+            background: linear-gradient(90deg, #64b5f6, #90caf9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .right-panel .panel-title {
+            background: linear-gradient(90deg, #81c784, #a5d6a7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .panel-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            max-width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        /* Glassmorphism containers */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            font-family: 'Shabnam', 'Vazir', sans-serif;
+            min-height: 60px;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, var(--secondary-dark), var(--secondary));
+        }
+        
+        /* Input Styles */
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .national-code-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            font-size: 1.4rem;
+            text-align: center;
+            font-family: 'Shabnam', 'Vazir', monospace;
+            transition: all 0.3s ease;
+            direction: ltr;
+            letter-spacing: 2px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .national-code-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .national-code-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Result Display */
+        .result-container {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .result-title {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+        
+        .result-value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            font-family: 'Shabnam', 'Vazir', monospace;
+            letter-spacing: 2px;
+            color: white;
+            direction: ltr;
+            word-break: break-all;
+            padding: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .validation-result {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .valid {
+            background: rgba(46, 204, 113, 0.3);
+            border: 1px solid rgba(46, 204, 113, 0.5);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+        }
+        
+        .invalid {
+            background: rgba(231, 76, 60, 0.3);
+            border: 1px solid rgba(231, 76, 60, 0.5);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+        }
+        
+        /* GitHub Link */
+        .github-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            z-index: 100;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .github-link:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .github-link svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+        
+        /* App Title */
+        .app-title {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 300;
+            z-index: 100;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Shabnam', 'Vazir', sans-serif;
+            font-size: 0.95rem;
+        }
+        
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Divider line between panels */
+        .divider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: 10;
+            transform: translateX(-50%);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .split-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+            }
+            
+            .panel {
+                min-height: 50vh;
+                padding: 30px 20px;
+            }
+            
+            .panel:hover {
+                flex: 1;
+            }
+            
+            .left-panel {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .divider {
+                display: none;
+            }
+            
+            .app-title {
+                position: static;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .github-link {
+                position: static;
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            .panel-content {
+                padding-top: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .panel-title {
+                font-size: 1.7rem;
+            }
+            
+            .glass-card {
+                padding: 20px;
+            }
+            
+            .btn {
+                min-width: 160px;
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+            
+            .result-value {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .panel-title {
+                font-size: 1.5rem;
+            }
+            
+            .btn {
+                min-width: 140px;
+                padding: 12px 16px;
+                font-size: 0.95rem;
+            }
+            
+            .national-code-input {
+                font-size: 1.2rem;
+                padding: 15px 20px;
+            }
+            
+            .result-value {
+                font-size: 1.6rem;
+            }
+        }
+        
+        /* Animation for generated code */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* For SEO content - hidden but accessible */
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Decorative elements */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .left-circle {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            top: -100px;
+            left: -100px;
+        }
+        
+        .right-circle {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            bottom: -80px;
+            right: -80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative background elements -->
+    <div class="bg-circle left-circle"></div>
+    <div class="bg-circle right-circle"></div>
+    
+    <!-- GitHub Link -->
+    <a href="https://github.com/majidh1/iranianNationalCode" class="github-link" target="_blank" rel="noopener">
+        <svg aria-hidden="true" version="1.1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        <span>مشاهده در GitHub</span>
+    </a>
+    
+    <!-- App Title -->
+    <div class="app-title">تولید و اعتبارسنجی کد ملی</div>
+    
+    <!-- Divider between panels -->
+    <div class="divider"></div>
+    
+    <!-- Split Screen Layout -->
+    <div class="split-container">
+        <!-- Left Panel: Generate National Code -->
+        <section class="panel left-panel">
+            <div class="panel-content">
+                <h2 class="panel-title">تولید کد ملی</h2>
+                <p class="panel-description">کد ملی معتبر ۱۰ رقمی تولید کنید. برای تست نرم‌افزارها و کاربردهای توسعه</p>
+                
+                <div class="glass-card">
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="generateRandomCode()">
+                            <span>تولید کد رندم</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="generateStandardCode()">
+                            <span>تولید کد استاندارد</span>
+                        </button>
+                    </div>
+                    
+                    <div class="result-container">
+                        <div class="result-title">کد ملی تولید شده:</div>
+                        <div id="generatedCode" class="result-value">1234567890</div>
+                        <div class="action-buttons">
+                            <button class="action-btn" onclick="copyGeneratedCode()" id="copyBtn">
+                                کپی کد
+                            </button>
+                            <button class="action-btn" onclick="generateRandomCode()">
+                                تولید مجدد
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Right Panel: Validate National Code -->
+        <section class="panel right-panel">
+            <div class="panel-content">
+                <h2 class="panel-title">اعتبارسنجی کد ملی</h2>
+                <p class="panel-description">کد ملی را برای بررسی صحت وارد کنید. الگوریتم استاندارد اعتبارسنجی کد ملی ایران</p>
+                
+                <div class="glass-card">
+                    <div class="input-group">
+                        <input type="text" id="codeInput" class="national-code-input" placeholder="مثال: ۱۲۳۴۵۶۷۸۹۰" maxlength="10" inputmode="numeric">
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="validateCode()" style="width: 100%; max-width: 300px;">
+                        <span>بررسی صحت کد ملی</span>
+                    </button>
+                    
+                    <div class="result-container">
+                        <div class="result-title">نتیجه اعتبارسنجی:</div>
+                        <div id="validationResult" class="validation-result">کد ملی را وارد کنید</div>
+                        <div class="action-buttons" style="margin-top: 20px;">
+                            <button class="action-btn" onclick="clearValidation()">
+                                پاک کردن
+                            </button>
+                            <button class="action-btn" onclick="useGeneratedCode()">
+                                استفاده از کد تولید شده
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- SEO content (hidden but accessible) -->
+    <div class="seo-content">
+        <h1>تولید کننده کد ملی ایران</h1>
+        <p>کارت شناسایی ملی یک کد دارای یکسری قوانین خاص است که هر عدد ۱۰ رقمی نمی‌تواند یک کد ملی معتبر باشد. از این رو برای شما این صفحه آماده‌سازی شده تا تولید کننده یک کد ملی و بررسی صحت کد ملی باشد.</p>
+        <h2>تشخیص صحت کد ملی</h2>
+        <p>در امروزه بیشتر نرم‌افزارها برای تولید کد ملی نیاز به استفاده از کد ملی به عنوان یک پارامتر منحصر به فرد و یونیک برای اطلاعات فردی دارند.</p>
+        <h3>تشخیص صحت کد ملی - کد ملی ساز - الگوریتم تشخیص</h3>
+        <p>ساخت و ایجاد یک کد ملی به سادگی انجام می‌شود و برای صحت و بررسی و تست کد ملی این پیج ساخته شده است. تولید کد ملی رند و شماره ملی ایران و ایرانی رندم است و کمک برنامه نویسان کد جاوا</p>
+        <h4>ساخت کد ملی معتبر</h4>
+    </div>
+    
+    <script>
+        // Generate Random National Code
+        function generateRandomCode() {
+            const code = roundGenerator();
+            displayGeneratedCode(code);
+        }
+        
+        // Generate Standard National Code
+        function generateStandardCode() {
+            const code = generator();
+            displayGeneratedCode(code);
+        }
+        
+        // Display the generated code with animation
+        function displayGeneratedCode(code) {
+            const codeElement = document.getElementById('generatedCode');
+            codeElement.textContent = code;
+            codeElement.classList.remove('fade-in');
+            void codeElement.offsetWidth; // Trigger reflow
+            codeElement.classList.add('fade-in');
+            
+            // Update copy button
+            const copyBtn = document.getElementById('copyBtn');
+            copyBtn.textContent = 'کپی کد';
+        }
+        
+        // Copy generated code to clipboard
+        function copyGeneratedCode() {
+            const codeElement = document.getElementById('generatedCode');
+            const code = codeElement.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const copyBtn = document.getElementById('copyBtn');
+                copyBtn.textContent = 'کپی شد!';
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    copyBtn.textContent = 'کپی کد';
+                }, 2000);
+            });
+        }
+        
+        // Validate the entered national code
+        function validateCode() {
+            const input = document.getElementById('codeInput');
+            const code = input.value.trim();
+            const resultElement = document.getElementById('validationResult');
+            
+            // Clear previous result
+            resultElement.className = 'validation-result';
+            
+            // Check if input is empty
+            if (!code) {
+                resultElement.textContent = 'لطفا کد ملی را وارد کنید';
+                return;
+            }
+            
+            // Check if input is numeric and 10 digits
+            if (!/^\d{10}$/.test(code)) {
+                resultElement.textContent = 'کد ملی باید ۱۰ رقم عددی باشد';
+                resultElement.classList.add('invalid');
+                return;
+            }
+            
+            // Validate the code
+            const isValid = validator(code);
+            
+            // Display result
+            if (isValid) {
+                resultElement.textContent = 'کد ملی معتبر است ✓';
+                resultElement.classList.add('valid');
+            } else {
+                resultElement.textContent = 'کد ملی نامعتبر است ✗';
+                resultElement.classList.add('invalid');
+            }
+            
+            // Add animation
+            resultElement.classList.remove('fade-in');
+            void resultElement.offsetWidth; // Trigger reflow
+            resultElement.classList.add('fade-in');
+        }
+        
+        // Clear validation input and result
+        function clearValidation() {
+            document.getElementById('codeInput').value = '';
+            const resultElement = document.getElementById('validationResult');
+            resultElement.textContent = 'کد ملی را وارد کنید';
+            resultElement.className = 'validation-result';
+        }
+        
+        // Use the generated code in the validation input
+        function useGeneratedCode() {
+            const generatedCode = document.getElementById('generatedCode').textContent;
+            document.getElementById('codeInput').value = generatedCode;
+        }
+        
+        // Allow validation with Enter key
+        document.getElementById('codeInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                validateCode();
+            }
+        });
+        
+        // Format input automatically
+        document.getElementById('codeInput').addEventListener('input', function(e) {
+            // Remove non-numeric characters
+            this.value = this.value.replace(/\D/g, '');
+            
+            // Limit to 10 digits
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+        });
+        
+        // Generate a random code on page load
+        window.addEventListener('load', function() {
+            generateRandomCode();
+        });
     </script>
-  </body>
+</body>
 </html>
