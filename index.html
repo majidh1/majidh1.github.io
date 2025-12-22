@@ -1,175 +1,185 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-<style>
-    html {
-        overflow-x: hidden;
-    }
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Majid Houshyar | Frontend Developer & Open Source</title>
 
-    body {
-        font-family: 'Lato', sans-serif;
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Majid Houshyar (مجید هوشیار) – Frontend Developer، خالق JalaliDatePicker و پروژه‌های متن‌باز جاوااسکریپتی"
+    />
+    <meta
+      name="keywords"
+      content="Majid Houshyar, مجید هوشیار, Frontend Developer, JalaliDatePicker, JavaScript, React"
+    />
+    <meta name="author" content="Majid Houshyar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Majid Houshyar | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Frontend Developer و سازنده JalaliDatePicker"
+    />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/43379900?s=400"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #4f46e5;
+        --dark: #111827;
+        --gray: #6b7280;
+        --bg: #f9fafb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
         margin: 0;
-        background-color: white;
-    }
+        font-family: "Vazirmatn", sans-serif;
+        background: var(--bg);
+        color: var(--dark);
+        line-height: 1.8;
+      }
 
-    a {
-        text-decoration: none;
-    }
+      header {
+        background: linear-gradient(135deg, var(--primary), #6366f1);
+        color: white;
+        padding: 3rem 1rem 5rem;
+        text-align: center;
+      }
 
-
-    .card {
-        z-index: 1;
-        position: relative;
-        width: 300px;
-        height: 400px;
-        margin: 0 auto;
-        margin-top: 100px;
-        background-color: white;
-        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        -webkit-transition: all 0.7s ease-in-out;
-        -moz-transition: all 0.7s ease-in-out;
-        -o-transition: all 0.7s ease-in-out;
-        -ms-transition: all 0.7s ease-in-out;
-    }
-
-        .card.active {
-            height: 490px;
-        }
-
-    .banner {
-        z-index: 2;
-        position: relative;
-        margin-top: -154px;
-        width: 100%;
-        height: 150px;
-        background-image: url("https://picsum.photos/seed/picsum/400/200");
-        background-size: cover;
-        border-bottom: solid 1px lightgrey;
-        -webkit-transition: all 0.7s ease-in-out;
-        -moz-transition: all 0.7s ease-in-out;
-        -o-transition: all 0.7s ease-in-out;
-        -ms-transition: all 0.7s ease-in-out;
-    }
-
-        .banner.active {
-            height: 0;
-        }
-
-    .photo {
-        z-index: 3;
-        position: relative;
+      header img {
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        background-color: white;
-        margin: 0 auto;
-        background-image: url("https://avatars.githubusercontent.com/u/43379900?s=200&v=4");
-        background-size: cover;
-        background-position: 50% 50%;
-        top: 75px;
-        -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-        -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-        box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
-        -webkit-transition: top 0.7s ease-in-out, background 0.15s ease;
-        -moz-transition: top 0.7s ease-in-out, background 0.15s ease;
-        -o-transition: top 0.7s ease-in-out, background 0.15s ease;
-        -ms-transition: top 0.7s ease-in-out, background 0.15s ease;
-    }
+        border: 5px solid white;
+        margin-top: 1rem;
+        background: white;
+      }
 
-        .photo.active {
-            top: -80px;
-        }
+      h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0.5rem;
+      }
 
-    .card ul {
-        list-style: none;
+      h2 {
+        font-weight: 400;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      main {
+        max-width: 900px;
+        margin: -4rem auto 0;
+        padding: 1rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 1.25rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
         text-align: center;
-        padding-left: 0;
-        margin-top: 87px;
-        margin-bottom: 30px;
-        font-size: 20px;
-        -webkit-transition: all 0.7s ease-in-out;
-        -moz-transition: all 0.7s ease-in-out;
-        -o-transition: all 0.7s ease-in-out;
-        -ms-transition: all 0.7s ease-in-out;
-    }
+      }
 
-        .card ul.active {
-            opacity: 0;
-            visibility: hidden;
-        }
+      .socials a {
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: transform 0.2s ease;
+      }
 
-    .card i {
-        font-size: 25px;
-        display: inline-block;
-        margin-top: 10px;
-        margin-left: 40px;
-        margin-right: 150px;
-        width: 300px;
-        ;
-        text-align: left;
-        color: #C7D0E1;
-    }
+      .socials a:hover {
+        transform: scale(1.2);
+      }
 
-    .social-media-banner {
-        width: 300px;
-        height: 50px;
-        margin-top: 25px;
+      .links {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+
+      .links a {
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 0.75rem;
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: 1px solid #e5e7eb;
+      }
+
+      .links a:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      footer {
         text-align: center;
-        position: absolute;
-        -webkit-transition: all 1.5s ease-in-out;
-        -moz-transition: all 1.5s ease-in-out;
-        -o-transition: all 1.5s ease-in-out;
-        -ms-transition: all 1.5 ease-in-out;
-    }
+        padding: 2rem 1rem;
+        color: var(--gray);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
 
-        .social-media-banner.active {
-            opacity: 0;
-            visibility: hidden;
-            -webkit-transition: all 0.1s ease-in-out;
-            -moz-transition: all 0.1s ease-in-out;
-            -o-transition: all 0.1s ease-in-out;
-            -ms-transition: all 0.1s ease-in-out;
-        }
+  <body>
+    <header>
+      <img
+        src="https://avatars.githubusercontent.com/u/43379900?s=400"
+        alt="Majid Houshyar Profile Photo"
+      />
+      <h1>مجید هوشیار - Majid Houshyar</h1>
+      <h2>MAjidH1</h2>
+    </header>
 
-        .social-media-banner a i {
-            display: inline;
-            width: auto;
-            margin-right: 15px;
-            margin-left: 10px;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-        }
+    <main>
+      <section class="card">
+        <p>
+            Java Script, TypeScript, CSS, React, Angular, ASP.NET MVC, C#.NET, ASP.NET MVC Core, ADO.NET, Entity framwork, SQL Server, LINQ, AJAX, WEB SERVICES, Windows Forms, Web API
+        </p>
 
-            .social-media-banner a i:hover {
-                color: #979da8;
-            }
-</style>
-
-<body>
-    <div class="card">
-        <div class="photo"></div>
-        <div class="banner"></div>
-        <ul>
-            <li><b>Majid Houshyar - MAjidH1</b></li>
-            <li>مجید هوشیار</li>
-            <li>Web Developer</li>
-        </ul>
-        <div class="social-media-banner">
-            <a href="https://github.com/majidh1"><i class="fa fa-github"></i></a>
-            <a href="https://instagram.com/majidhone"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/majidh1"><i class="fa fa-linkedin"></i></a>
-            <div>
-                <br>
-                <a href="/JalaliDatePicker">تقویم</a>
-                <span> | </span>
-                <a href="/iranianNationalCode">کدملی ساز</a>
-                <span> | </span>
-                <a href="/tax1404">مالیات بر حقوق</a>
-                <span> | </span>
-                <a href="/runner-game">بازی</a>
-            </div>
+        <div class="socials">
+          <a href="https://github.com/majidh1" aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://instagram.com/majidhone" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/majidh1" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
-    </div>
-</body>
+
+        <div class="links">
+          <a href="/JalaliDatePicker">📅 Jalali Date Picker</a>
+          <a href="/iranianNationalCode">🆔 کد ملی ساز</a>
+          <a href="/tax">💰 مالیات حقوق</a>
+          <a href="/runner-game">🎮 Runner Game</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2025 Majid Houshyar — Built with ❤️ on GitHub Pages</footer>
+  </body>
+</html>
