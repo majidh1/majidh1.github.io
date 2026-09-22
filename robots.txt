@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://majidh1.github.io/sitemap.xml
